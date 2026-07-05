@@ -5,3 +5,6 @@ dist/
 *.local
 samples/
 smoke.png
+pdf-editor-plan.md
+pdf-mvp-plan.md
+pdf-editor-plan-suggestions.md
