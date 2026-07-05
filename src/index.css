@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/*
+ * pdf.js text layer (minimal subset of the rules pdf.js's own viewer uses).
+ * The container must expose --scale-factor, set at render time in PageView.
+ */
+.textLayer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  text-align: initial;
+  line-height: 1;
+  text-size-adjust: none;
+  forced-color-adjust: none;
+  transform-origin: 0 0;
+  caret-color: CanvasText;
+}
+
+.textLayer span,
+.textLayer br {
+  color: transparent;
+  position: absolute;
+  white-space: pre;
+  cursor: text;
+  transform-origin: 0% 0%;
+}
+
+.textLayer ::selection {
+  background: rgba(59, 130, 246, 0.35);
+}
+
+/* Amber selection while the highlighter tool is active, as a preview of the result. */
+.tool-highlight .textLayer ::selection {
+  background: rgba(250, 204, 21, 0.5);
+}
